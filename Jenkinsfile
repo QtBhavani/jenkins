@@ -20,7 +20,7 @@ pipeline {
         sh "mvn clean package"
       }
 }
-    tage("Test Application"){
+    stage("Test Application"){
       steps {
         sh "mvn test"
       }
