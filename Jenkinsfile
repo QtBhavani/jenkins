@@ -4,12 +4,6 @@ pipeline {
       jdk 'java17'
       maven 'maven3'
     }
-  stages{
-    stage("cleanup workspace"){
-      steps {
-        cleanWs()
-      }
-}
     stage("checkout from SCM"){
       steps {
         git branch: 'main', credentialsId: 'github', url: 'https://github.com/QtBhavani/jenkins.git'
