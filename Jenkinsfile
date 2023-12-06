@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage("checkout from SCM"){
       steps {
-        git branch: 'main', credentialsId: 'github', url: 'https://github.com/QtBhavani/jenkins.git'
+        git branch: 'main', credentialsId: 'githubtoken', url: 'https://github.com/QtBhavani/jenkins.git'
       }
 }
     stage("Build Application"){
